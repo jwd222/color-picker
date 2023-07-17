@@ -8,6 +8,7 @@ ToastContainer
 const App = () => {
   const [colors, setColors] = useState(new Values('#f15025').all(10))
 
+  // list of colors for 'color' is updated using value.js
   const addColor = (color) => {
     try {
       const newColors = new Values(color).all(10)

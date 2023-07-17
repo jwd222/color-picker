@@ -1,7 +1,10 @@
 import { toast } from 'react-toastify'
 
-const SingleColor = ({ index, color }) => {
+export const SingleColor = ({ index, color }) => {
+  //destucture to get the values
   const { hex, weight } = color
+
+  //copy to clipboard functionality
   const saveToClipboard = async () => {
     if (navigator.clipboard) {
       try {
@@ -17,6 +20,7 @@ const SingleColor = ({ index, color }) => {
 
   return (
     <article
+      //for 10 shades of each color use different color text based on the color shades
       className={index > 10 ? 'color color-light' : 'color'}
       style={{ background: `#${hex}` }}
       onClick={saveToClipboard}
@@ -26,5 +30,3 @@ const SingleColor = ({ index, color }) => {
     </article>
   )
 }
-
-export default SingleColor

@@ -3,6 +3,8 @@ import { useState } from 'react'
 export const Form = ({ addColor }) => {
   const [color, setColor] = useState('')
 
+  // handles the submit functionality
+  //// addcolor is passed the color value so that it can update the list of colors for that particular color
   const handleSubmit = (e) => {
     e.preventDefault()
     addColor(color)
