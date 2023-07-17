@@ -1,6 +1,6 @@
 import { toast } from 'react-toastify'
 
-export const SingleColor = ({ index, color }) => {
+const SingleColor = ({ index, color }) => {
   //destucture to get the values
   const { hex, weight } = color
 
@@ -30,3 +30,5 @@ export const SingleColor = ({ index, color }) => {
     </article>
   )
 }
+
+export default SingleColor
